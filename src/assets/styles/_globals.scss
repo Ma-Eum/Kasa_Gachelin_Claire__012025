@@ -1,1 +1,17 @@
-/* Styles globaux */
+/* ==========================
+   Styles Généraux
+========================== */
+@use './variables';
+
+// ==========================
+// Styles Généraux
+// ==========================
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: $black;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
