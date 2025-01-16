@@ -1,1 +1,61 @@
-/* Styles pour Header */
+/* ==========================
+   Header
+========================== */
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 100px;
+
+  &-logo {
+    font-size: 24px;
+    font-weight: 500;
+
+    img {
+      width: 150px;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    gap: 57px;
+
+    .nav-link {
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--black);
+      text-decoration: none;
+      position: relative; // Nécessaire pour le soulignement personnalisé
+
+      &:hover {
+        color: var(--primary-red);
+      }
+
+      &.active::after {
+        content: ''; // Éléments pseudo pour la ligne
+        position: absolute;
+        bottom: 0; // Place le soulignement sous le texte
+        left: 0;
+        width: 100%; // Largeur égale au texte
+        height: 2px; // Épaisseur de la ligne
+        background-color: var(--black); // Couleur de la ligne
+      }
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    margin: 20px;
+
+    &-nav {
+      gap: 20px;
+
+      .nav-link {
+        font-size: 18px;
+      }
+    }
+  }
+}
