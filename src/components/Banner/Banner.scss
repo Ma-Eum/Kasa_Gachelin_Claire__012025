@@ -1,1 +1,59 @@
-/* Styles pour Banner */
+/* ==========================
+   Banner
+========================== */
+// Import des variables globales (à ajuster selon votre structure)
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+
+.banner {
+  position: relative;
+  height: 223px;
+  width: 100%;
+  background-image: url('../../assets/images/Image\ source\ 1.png');
+  background-size: cover; // Remplit le conteneur sans déformer l'image
+  background-position: center; // Centre l'image
+  overflow: hidden; // Pour éviter que le contenu dépasse
+  border-radius: 25px;
+  margin-bottom: 50px; // Espace entre la bannière et les logements
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); // Couleur noire avec 40% d'opacité
+    z-index: 1; // Place la couche d'opacité entre l'image et le texte
+  }
+
+  &-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2; // Assure que le texte est au-dessus de la couche d'opacité
+  }
+
+  @include mobile {
+    height: 110px; // Réduit la hauteur de la bannière
+    border-radius: 8px;
+    margin-bottom: 27px;
+
+    &-title {
+      font-size: 24px;
+      left: 20px; // Alignement gauche avec marge
+      transform: translateY(-50%);
+      line-height: 1.4; // Espacement entre les lignes
+      max-width: 210px; // Limite la largeur pour forcer deux lignes
+      word-wrap: break-word; // Force le retour à la ligne
+      white-space: normal; // Gère l'adaptation du texte
+      text-align: left; // Aligné à gauche
+    }
+  }
+}
