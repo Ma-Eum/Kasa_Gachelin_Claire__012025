@@ -1,1 +1,18 @@
-/* Mixins SCSS */
+/* ==========================
+   Mixins
+========================== */
+
+// ==========================
+// Mixin pour gérer les styles mobiles
+// ==========================
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
