@@ -8,21 +8,21 @@ const Home = () => {
       {/* Header */}
       <Header />
 
-      {/* Banner */}
-      <Banner title="Chez vous, partout et ailleurs" />
-
-      {/* Liste des logements (Housing Section, à compléter) */}
       <main className="main-index">
+        {/* Banner */}
+        <Banner title="Chez vous, partout et ailleurs" />
+
+        {/* Liste des logements */}
         <div className="housing housing-index">
           <section className="housing-grid">
-            {/* Cartes de logement cliquables */}
+            {/* Exemple de cartes de logement */}
             <a href="logement.html" className="housing-link">
               <div className="housing-card">
                 <img src="" alt="Image logement" />
                 <p className="housing-title">Titre de la location</p>
               </div>
             </a>
-            {/* Ajoute plus de cartes ici */}
+            {/* Vous pouvez ajouter d'autres cartes ici */}
           </section>
         </div>
       </main>
