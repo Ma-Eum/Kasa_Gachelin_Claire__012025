@@ -1,6 +1,84 @@
 /* ==========================
-   Collapse
+   Collapse Sections
 ========================== */
 
 @use '../../assets/styles/variables' as vars;
 @use '../../assets/styles/mixins' as mixins;
+
+.collapse-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 86px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.collapse {
+  flex: 1;
+  position: relative;
+
+  &-toggle {
+    display: none; // Masque la checkbox
+  }
+
+  &-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: vars.$primary-red;
+    color: vars.$white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  &-content {
+    display: none;
+    background: vars.$white;
+    padding: 15px;
+    border: 1px solid vars.$primary-red;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+  }
+
+  &-content ul {
+    list-style: none;
+  }
+
+  // Afficher le contenu quand la checkbox est cochée
+  &-toggle:checked + &-btn + &-content {
+    display: block;
+  }
+
+  // Chevron rotation
+  &-btn i {
+    transform: rotate(180deg); // Chevron pointe vers le bas par défaut
+    transition: transform 0.3s ease; // Transition fluide pour la rotation
+  }
+
+  &-toggle:checked + &-btn i {
+    transform: rotate(0deg); // Chevron pointe vers le haut
+  }
+}
+
+/* Responsive Styles */
+@include mixins.mobile {
+  .collapse-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .collapse-btn {
+    font-size: 13px;
+    padding: 10px 15px;
+  }
+
+  .collapse-content {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
