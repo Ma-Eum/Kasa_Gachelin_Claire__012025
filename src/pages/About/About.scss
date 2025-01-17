@@ -1,1 +1,106 @@
-/* Styles pour About */
+/* ==========================
+   Page À Propos
+========================== */
+
+@use '../../assets/styles/variables' as vars;
+@use '../../assets/styles/mixins' as mixins;
+
+.about-header {
+  margin: 50px 100px 38px 100px;
+}
+
+/* Banner */
+.about-banner {
+    background-image: url('../../assets/images/Image\ source\ 2.png'); // Image de la bannière
+    margin-bottom: 38px;
+}
+
+
+/* Collapse Container */
+.about-collapse-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 108px 38px 108px; // Centrer et espacer du footer
+}
+
+/* Collapse Section */
+.about-collapse {
+  position: relative;
+
+  &-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: vars.$primary-red;
+    color: vars.$white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  &-content {
+    display: none;
+    background: vars.$white;
+    padding: 15px;
+    border: 1px solid vars.$primary-red;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  &-toggle {
+    display: none;
+  }
+
+  // Afficher le contenu quand la checkbox est cochée
+  &-toggle:checked + &-btn + &-content {
+    display: block;
+  }
+
+  // Chevron rotation
+  &-btn i {
+    transform: rotate(180deg); // Chevron pointe vers le bas par défaut
+    transition: transform 0.3s ease;
+  }
+
+  &-toggle:checked + &-btn i {
+    transform: rotate(0deg); // Chevron pointe vers le haut
+  }
+}
+
+/* Responsive Styles */
+@include mixins.mobile {
+  .about-header {
+    margin-bottom: 19px;
+  }
+
+  .about-banner {
+    height: 111px; // Hauteur ajustée pour mobile
+    border-radius: 8px;
+    margin-bottom: 19px; // Espacement entre la bannière et le contenu
+  }
+
+  .about-collapse-container {
+    margin: 0 0 19px 0; // Ajustement des marges
+    gap: 20px; // Espacement entre les éléments de la section
+  }
+
+  .about-collapse {
+    &-btn {
+      font-size: 16px;
+      padding: 10px 15px; // Réduction des dimensions
+    }
+
+    &-content {
+      font-size: 14px; // Texte légèrement plus petit
+      padding: 10px 15px; // Ajustement de l'espace interne
+    }
+  }
+}
