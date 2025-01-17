@@ -2,8 +2,8 @@
    Banner
 ========================== */
 // Import des variables globales (à ajuster selon votre structure)
-@use '../../assets/styles/variables' as *;
-@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as vars;
+@use '../../assets/styles/mixins' as mixins;
 
 .banner {
   position: relative;
@@ -32,7 +32,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--white);
+    color: vars.$white;
     font-size: 36px;
     font-weight: 700;
     text-align: center;
@@ -40,7 +40,7 @@
     z-index: 2; // Assure que le texte est au-dessus de la couche d'opacité
   }
 
-  @include mobile {
+  @include mixins.mobile {
     height: 110px; // Réduit la hauteur de la bannière
     border-radius: 8px;
     margin-bottom: 27px;

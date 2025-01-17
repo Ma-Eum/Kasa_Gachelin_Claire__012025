@@ -2,9 +2,12 @@
    Footer
 ========================== */
 
+@use '../../assets/styles/variables' as vars;
+@use '../../assets/styles/mixins' as mixins;
+
 .footer {
-   background: var(--black);
-   color: var(--white);
+   background: vars.$black;
+   color: vars.$white;
    display: flex;
    flex-direction: column;
    align-items: center;

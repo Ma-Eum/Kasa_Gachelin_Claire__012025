@@ -1,8 +1,8 @@
 /* ==========================
    Header
 ========================== */
-@use '../../assets/styles/variables' as *;
-@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as vars;
+@use '../../assets/styles/mixins' as mixins;
 
 .header {
   display: flex;
@@ -26,12 +26,12 @@
     .nav-link {
       font-size: 24px;
       font-weight: 400;
-      color: var(--black);
+      color: vars.$black;
       text-decoration: none;
       position: relative; // Nécessaire pour le soulignement personnalisé
 
       &:hover {
-        color: var(--primary-red);
+        color: vars.$primary-red;
       }
 
       &.active::after {
@@ -41,21 +41,31 @@
         left: 0;
         width: 100%; // Largeur égale au texte
         height: 2px; // Épaisseur de la ligne
-        background-color: var(--black); // Couleur de la ligne
+        background-color: vars.$black; // Couleur de la ligne
       }
     }
   }
 
-  @include mobile {
-    flex-direction: column;
-    margin: 20px;
+  @include mixins.mobile {
+    margin:  20px 27px;
 
     &-nav {
-      gap: 20px;
+      gap: 26px;
 
       .nav-link {
-        font-size: 18px;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: bold;
       }
+    }
+
+    &-nav .nav-link.active::after {
+      display: none;
+    }
+
+    &-logo img{
+      width: 145px; /* Logo mobile */
+      height: auto;
     }
   }
 }

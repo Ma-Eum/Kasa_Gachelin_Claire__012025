@@ -4,7 +4,7 @@
 @use './variables';
 @use './reset';
 @use './globals';
-@use './mixins';
+@use './mixins' as mixins;
 
 // ==========================
 // Main
@@ -13,7 +13,7 @@ main {
   margin: 0 100px; // Marge de 100px à gauche et à droite
   margin-bottom: 50px; // Espace entre le main et le footer
 
-  @include mobile {
+  @include mixins.mobile {
     margin: 0 20px 27px; // Réduit la marge à gauche et à droite
   }
 }

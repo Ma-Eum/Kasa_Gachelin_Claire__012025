@@ -1,17 +1,17 @@
 /* ==========================
    Styles Généraux
 ========================== */
-@use './variables';
+@use './variables' as vars;
 
 // ==========================
 // Styles Généraux
 // ==========================
 body {
   font-family: 'Montserrat', sans-serif;
-  color: $black;
+  color: vars.$black;
 }
 
 a {
   text-decoration: none;
-  color: $black;
+  color: vars.$black;
 }

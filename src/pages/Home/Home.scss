@@ -1,8 +1,8 @@
-@use '../../assets/styles/variables' as *;
-@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as vars;
+@use '../../assets/styles/mixins' as mixins;
 
 .housing {
-  background-color: var(--lightgray);
+  background-color: vars.$lightgray;
   border-radius: 25px;
   padding: 50px; // Ajout d'espace interne
   overflow: hidden; // Évite le débordement du contenu
@@ -15,7 +15,7 @@
 
   &-card {
     height: 340px;
-    background: linear-gradient(to bottom, var(--primary-red) 50%, #666666 200%);
+    background: linear-gradient(to bottom, vars.$primary-red 50%, #666666 200%);
     border-radius: 10px;
     overflow: hidden;
     text-align: left;
@@ -53,14 +53,14 @@
     left: 10px; // Distance depuis la gauche
     padding: 10px;
     font-size: 18px;
-    color: var(--white);
+    color: vars.$white;
     font-weight: bold;
     max-width: 150px; // Limite la largeur du texte pour forcer le retour à la ligne
     word-wrap: break-word; // Permet de gérer le retour à la ligne
     line-height: 1.2; // Ajuste l'espacement entre les lignes
   }
 
-  @include mobile {
+  @include mixins.mobile {
     &-grid {
       grid-template-columns: 1fr; // Une seule colonne
       gap: 15px; // Réduit l'espace entre les cartes
