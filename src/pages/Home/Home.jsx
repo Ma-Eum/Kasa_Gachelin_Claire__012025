@@ -1,5 +1,6 @@
 import Header from '../../components/Header/Header';
 import Banner from '../../components/Banner/Banner';
+import Footer from '../../components/Footer/Footer';
 import './Home.scss'; // Import des styles spécifiques à la page Home
 
 const Home = () => {
@@ -56,6 +57,9 @@ const Home = () => {
           </section>
         </div>
       </main>
+
+       {/* Footer */}
+       <Footer />
     </div>
   );
 };
