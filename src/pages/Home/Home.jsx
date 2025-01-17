@@ -22,6 +22,36 @@ const Home = () => {
                 <p className="housing-title">Titre de la location</p>
               </div>
             </a>
+            <a href="logement2.html" className="housing-link">
+              <div className="housing-card">
+                <img src="" alt="Image logement 2" />
+                <p className="housing-title">Titre de la location 2</p>
+              </div>
+            </a>
+            <a href="logement3.html" className="housing-link">
+              <div className="housing-card">
+                <img src="" alt="Image logement 3" />
+                <p className="housing-title">Titre de la location 3</p>
+              </div>
+            </a>
+            <a href="logement4.html" className="housing-link">
+              <div className="housing-card">
+                <img src="" alt="Image logement 4" />
+                <p className="housing-title">Titre de la location 4</p>
+              </div>
+            </a>
+            <a href="logement5.html" className="housing-link">
+              <div className="housing-card">
+                <img src="" alt="Image logement 5" />
+                <p className="housing-title">Titre de la location 5</p>
+              </div>
+            </a>
+             <a href="logement2.html" className="housing-link">
+              <div className="housing-card">
+                <img src="" alt="Image logement 2" />
+                <p className="housing-title">Titre de la location 2</p>
+              </div>
+            </a>
             {/* Vous pouvez ajouter d'autres cartes ici */}
           </section>
         </div>
