@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types'; // Import PropTypes
 import './Banner.scss'; // Assure-toi que ce chemin est correct
 
-const Banner = ({ title }) => {
+const Banner = ({ className, title }) => {
   return (
-    <section className="banner banner-index">
-      <div className="banner-title">{title}</div>
+    <section className={`banner ${className || ''}`}>
+      {title && <h1 className="banner-title">{title}</h1>}
     </section>
   );
 };
 
 // Validation des props
 Banner.propTypes = {
-  title: PropTypes.string.isRequired, // 'title' est requis et doit être une chaîne
+  className: PropTypes.string,
+  title: PropTypes.string, // Enlever .isRequired pour le rendre optionnel
 };
 
 export default Banner;
