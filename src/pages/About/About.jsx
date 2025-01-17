@@ -1,6 +1,6 @@
 import Header from '../../components/Header/Header';
 import Banner from '../../components/Banner/Banner';
-import '../About/About'
+import './About.scss';
 
 const About = () => {
   return (
@@ -8,11 +8,11 @@ const About = () => {
       {/* Header */}
       <Header />
 
-      {/* Banner */}
-      <Banner className="banner-about" />
+      <main className="about-main">
+        {/* Banner */}
+        <Banner className="about-banner" />
 
       {/* Collapse Sections */}
-      <main className="main-about">
         <div className="about-collapse-container">
           <div className="about-collapse">
             <input type="checkbox" id="fiabilite-toggle" className="collapse-toggle" />
