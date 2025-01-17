@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
-import About from './pages/About/About'; // Ajoute les autres pages plus tard
+import About from './pages/About/About'; // Import des pages
 
 const App = () => {
   return (
@@ -8,7 +8,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="*" element={<div>Page non trouvée</div>} />
+        {/* Fallback pour les routes non trouvées */}
+        <Route path="*" element={<div style={{ textAlign: 'center', padding: '20px' }}>Page non trouvée</div>} />
       </Routes>
     </Router>
   );
