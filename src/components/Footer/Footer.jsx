@@ -3,7 +3,7 @@ import logo from '../../assets/images/LOGO.png'; // Import du logo
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer footer-404">
       <div className="footer-logo">
         <img src={logo} alt="Logo Kasa" />
       </div>
