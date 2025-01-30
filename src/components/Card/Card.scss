@@ -1,16 +1,20 @@
+/* ==========================
+   Cards
+========================== */
+
 @use '../../assets/styles/variables' as vars;
 @use '../../assets/styles/mixins' as mixins;
 
 .housing {
   background-color: vars.$lightgray;
   border-radius: 25px;
-  padding: 50px; // Ajout d'espace interne
+  padding: 56px 50px 43px 50px; // Ajout d'espace interne
   overflow: hidden; // Évite le débordement du contenu
 
   &-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); // 3 colonnes
-    gap: 20px; // Espacement entre les cartes
+    gap: 50px; // Espacement entre les cartes
   }
 
   &-card {
