@@ -1,19 +1,22 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Collapse.scss';
 
 const Collapse = ({ title, content }) => {
-  const id = title.toLowerCase().replace(/\s+/g, '-');
+  const [isOpen, setIsOpen] = useState(false);
+
 
   return (
     <div className="collapse">
-      <input type="checkbox" id={id} className="collapse-toggle" />
-      <label htmlFor={id} className="collapse-btn">
+      <button className={`collapse-btn ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
         {title}
-        <i className="fa-solid fa-chevron-down"></i>
-      </label>
-      <div className="collapse-content">
-        {typeof content === 'string' ? <p>{content}</p> : content}
-      </div>
+        <i className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+      </button>
+      {isOpen && (
+        <div className={`collapse-content ${isOpen ? 'show' : ''}`}>
+          {typeof content === 'string' ? <p>{content}</p> : content}
+        </div>
+      )}
     </div>
   );
 };

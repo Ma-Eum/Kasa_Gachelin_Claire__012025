@@ -17,10 +17,6 @@
   flex: 1;
   position: relative;
 
-  &-toggle {
-    display: none; // Masque la checkbox
-  }
-
   &-btn {
     display: flex;
     justify-content: space-between;
@@ -37,21 +33,22 @@
   }
 
   &-content {
-    display: none;
+    max-height: 0;
     background: vars.$white;
     padding: 15px;
     border: 1px solid vars.$primary-red;
     border-top: none;
     border-radius: 0 0 5px 5px;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  }
+
+  &-content.show {
+    max-height: 500px; /* Ajuster selon le contenu */
+    padding: 15px;
   }
 
   &-content ul {
     list-style: none;
-  }
-
-  // Afficher le contenu quand la checkbox est cochée
-  &-toggle:checked + &-btn + &-content {
-    display: block;
   }
 
   // Chevron rotation
@@ -59,10 +56,11 @@
     transform: rotate(180deg); // Chevron pointe vers le bas par défaut
     transition: transform 0.3s ease; // Transition fluide pour la rotation
   }
-
-  &-toggle:checked + &-btn i {
-    transform: rotate(0deg); // Chevron pointe vers le haut
+  
+  &-btn.open i {
+    transform: rotate(180deg); // Chevron pointe vers le haut si ouvert
   }
+
 }
 
 /* Responsive Styles */
