@@ -17,7 +17,7 @@
 
 
 /* Collapse Container */
-.about-collapse-container,.collapse-container {
+.about-collapse-container {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -87,7 +87,7 @@
     margin-bottom: 19px; // Espacement entre la bannière et le contenu
   }
 
-  .about-collapse-container,.collapse-container  {
+  .about-collapse-container {
     margin: 0 0 19px 0; // Ajustement des marges
     gap: 20px; // Espacement entre les éléments de la section
   }

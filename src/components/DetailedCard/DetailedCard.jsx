@@ -5,8 +5,10 @@ const DetailedCard = ({ title, location, tags, host, rating }) => {
   return (
     <div className="detailed-card">
       <div className="details-info">
-        <h1 className="details-title">{title}</h1>
-        <p className="details-location">{location}</p>
+        <div className="details-header">        
+          <h1 className="details-header-title">{title}</h1>
+          <p className="details-header-location">{location}</p>
+        </div>
         <div className="details-tags">
           {tags.map((tag, index) => (
             <div key={index} className="tag">

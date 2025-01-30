@@ -69,7 +69,7 @@
     padding: 10px;
     font-size: 18px;
     color: vars.$white;
-    font-weight: bold;
+    font-weight: vars.$font-weight-bold;
     width: calc(100% - 20px);
     box-sizing: border-box;
     z-index: 2; // Assure que le titre est au-dessus du dégradé

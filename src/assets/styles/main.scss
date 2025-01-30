@@ -11,7 +11,6 @@
 // ==========================
 main {
   margin: 0 100px; // Marge de 100px à gauche et à droite
-  margin-bottom: 50px; // Espace entre le main et le footer
 
   @include mixins.mobile {
     margin: 0 20px 27px; // Réduit la marge à gauche et à droite
