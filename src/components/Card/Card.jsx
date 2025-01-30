@@ -5,9 +5,10 @@ const Card = ({ image, title, link }) => {
   return (
     <a href={link} className="housing-link">
       <div className="housing-card">
-        {/* Vérifie que l'image n'est pas vide et affiche uniquement si elle existe */}
-        {image ? <img src={image} alt={title} /> : null}
-        <p className="housing-title">{title}</p>
+        <div className="image-container">
+          <img src={image} alt={title} />
+        </div>
+        <h3 className="housing-title">{title}</h3>
       </div>
     </a>
   );
