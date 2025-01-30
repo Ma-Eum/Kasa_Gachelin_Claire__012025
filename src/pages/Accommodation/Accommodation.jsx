@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate  } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Slides from '../../components/Slides/Slides';
@@ -12,7 +12,7 @@ const Accommodation = () => {
   const accommodation = accommodations.find((item) => item.id === id);
 
   if (!accommodation) {
-    return <div>Logement introuvable</div>;
+    return <Navigate to="/404" replace />;
   }
 
   return (
