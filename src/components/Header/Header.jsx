@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'; // Utilisation de NavLink pour la na
 
 const Header = () => {
   return (
-    <header className="header">
+    <header className="header header-accomodations">
       <div className="header-logo">
         <img src={logo} alt="Logo Kasa" />
       </div>

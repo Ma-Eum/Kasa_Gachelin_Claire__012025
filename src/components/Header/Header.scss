@@ -25,7 +25,7 @@
 
     .nav-link {
       font-size: 24px;
-      font-weight: 400;
+      font-weight: vars.$font-weight-medium;
       color: vars.$black;
       text-decoration: none;
       position: relative; // Nécessaire pour le soulignement personnalisé
@@ -55,7 +55,6 @@
       .nav-link {
         font-size: 12px;
         text-transform: uppercase;
-        font-weight: bold;
       }
     }
 
