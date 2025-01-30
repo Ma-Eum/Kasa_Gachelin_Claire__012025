@@ -41,9 +41,11 @@ const Slides = ({ pictures }) => {
       )}
 
       {/* Compteur */}
-      <div className="carousel-counter">
+      {pictures.length > 1 && (
+        <div className="carousel-counter">
         {currentIndex + 1}/{pictures.length}
-      </div>
+        </div>
+        )}
     </div>
   );
 };
