@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px;
+  padding: 60px 50px 30px 50px;
   gap: 30px;
   height: 209px;
   margin-top: 50px; // Espace entre le footer et la section précédente
@@ -36,7 +36,8 @@
   /* Responsive Styles */
   @include mixins.mobile {
     height: auto;
-    padding: 20px;
+    padding-bottom: 58px;
+    padding-top: 66px;
     gap: 10px;
     margin-top: 0;
     justify-content: center;
@@ -49,9 +50,14 @@
     }
 
     &-logo {
+      margin: 0;
       img {
         width: 100px;
         height: auto;
+      }
+      p{
+        font-size: 12px;
+        font-weight: vars.$font-weight-medium;
       }
     }
   }
