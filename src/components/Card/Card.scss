@@ -87,7 +87,7 @@
     
     &-grid {
       grid-template-columns: 1fr; // Une seule colonne
-      gap: 15px; // Réduit l'espace entre les cartes
+      gap: 20px; // Réduit l'espace entre les cartes
     }
 
     &-card {
@@ -97,7 +97,7 @@
     }
 
     &-title {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 }

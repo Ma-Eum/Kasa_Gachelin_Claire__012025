@@ -44,16 +44,13 @@
   @include mixins.mobile {
     height: 110px; // Réduit la hauteur de la bannière
     border-radius: 8px;
-    margin-bottom: 27px;
+    margin-bottom: 22px;
 
     &-title {
       font-size: 24px;
-      left: 20px; // Alignement gauche avec marge
+      left: 0; // Alignement gauche avec marge
       transform: translateY(-50%);
-      line-height: 1.4; // Espacement entre les lignes
-      max-width: 210px; // Limite la largeur pour forcer deux lignes
-      word-wrap: break-word; // Force le retour à la ligne
-      white-space: normal; // Gère l'adaptation du texte
+      padding-left: 16px;
       text-align: left; // Aligné à gauche
     }
   }
