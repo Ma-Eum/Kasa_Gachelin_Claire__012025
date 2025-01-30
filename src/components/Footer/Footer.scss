@@ -35,10 +35,12 @@
 
   /* Responsive Styles */
   @include mixins.mobile {
+    height: auto;
     padding: 20px;
     gap: 10px;
     margin-top: 0;
     justify-content: center;
+    margin-top: 113px;
 
     p {
       font-size: 12px;
