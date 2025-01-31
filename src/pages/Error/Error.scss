@@ -6,12 +6,8 @@
 @use '../../assets/styles/mixins' as mixins;
 
 /* Header */
-.header-404 {
-  margin: 50px 100px 139px 100px; // Marge de 100px à gauche et à droite
-
-  @include mixins.mobile {
-    margin: 0 20px 113px;
-  }
+.error-header {
+  margin: 40px 100px 139px 100px; // Marge de 100px à gauche et à droite
 }
 
 /* Main Content */
@@ -21,60 +17,66 @@
   gap: 139px;
   align-items: center;
   margin-bottom: 0;
+}
+.error-code {
+  font-size: 288px;
+  font-weight: vars.$font-weight-bold;
+  color: vars.$primary-red;   
+}
 
-  @include mixins.mobile {
-    gap: 113px;
-  }
+.error-message {
+  font-size: 36px;
+  font-weight: vars.$font-weight-regular;
+  color: vars.$primary-red;
+  text-align: center;
+  margin: 20px 0; // Espacement entre le code d'erreur et le message   
+}
 
-  .error-code {
-    font-size: 288px;
-    font-weight: 700;
-    color: vars.$primary-red;
+.back-home {
+  font-size: 18px;
+  font-weight: vars.$font-weight-regular;
+  color: vars.$black;
+  text-decoration: none;
+  border-bottom: 1px solid vars.$black; // Soulignement stylisé
+  transition: opacity 0.3s ease;
 
-    @include mixins.mobile {
-      font-size: 96px; // Taille réduite pour mobile
-    }
-  }
-
-  .error-message {
-    font-size: 36px;
-    font-weight: 400;
-    color: vars.$primary-red;
-    text-align: center;
-    margin: 20px 0; // Espacement entre le code d'erreur et le message
-
-    @include mixins.mobile {
-      font-size: 18px;
-      line-height: 1.4; // Espacement entre les lignes
-      max-width: 200px; // Limite la largeur pour forcer un retour à la ligne
-    }
-  }
-
-  .back-home {
-    font-size: 18px;
-    font-weight: 500;
-    color: vars.$black;
-    text-decoration: none;
-    border-bottom: 1px solid vars.$black; // Soulignement stylisé
-    transition: opacity 0.3s ease;
-
-    &:hover {
-      opacity: 0.7; // Soulignement stylisé
-    }
-
-    @include mixins.mobile {
-      font-size: 14px;
-    }
+  &:hover {
+    opacity: 0.7; // Soulignement stylisé
   }
 }
 
 /* Footer */
 .footer-404 {
-
+  margin-top: 139px;
   .footer-logo img {
     filter: brightness(0) invert(1); // Logo en blanc
     width: 122px;
     height: 39px;
   }
-
 }
+
+  @include mixins.mobile {
+    .error-header {
+      margin: 20px 20px 113px;
+    }
+
+    .error-code {
+      font-size: 96px; // Taille réduite pour mobile
+    }
+
+    .error-message {
+      font-size: 18px;
+    }
+
+    .back-home {
+      font-size: 14px;
+    }
+
+    .main-404 {
+      gap: 113px;
+    }
+
+    .footer-404{
+      margin-top: 113px;
+    }
+  }
