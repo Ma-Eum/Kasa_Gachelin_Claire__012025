@@ -10,7 +10,7 @@ const Footer = () => {
     if (location.pathname === "/about") return "about-footer";
     if (location.pathname === "/accommodations") return "footer-accommodations";
     if (location.pathname === "/404") return "footer-404";
-    return "footer-home"; // Par défaut pour la page d'accueil
+    return "footer"; // Par défaut pour la page d'accueil
   })();
 
   return (

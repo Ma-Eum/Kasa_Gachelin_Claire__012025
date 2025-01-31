@@ -6,11 +6,15 @@ const Header = () => {
   const location = useLocation(); // Récupère l'URL active
 
   // Détermine la classe du header en fonction de la page
-  const headerClass =
-    location.pathname === '/about' ? 'header about-header' : 'header header-home';
+  const headerClass = (() => {
+      if (location.pathname === "/about") return "about-header ";
+      //if (location.pathname === "/accommodations") return "footer-accommodations";
+      if (location.pathname === "/404") return "error-header";
+      return "header"; // Par défaut pour la page d'accueil
+    })();
 
   return (
-    <header className={headerClass}>
+    <header className={`header ${headerClass}`}>
       <div className="header-logo">
         <img src={logo} alt="Logo Kasa" />
       </div>
