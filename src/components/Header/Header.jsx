@@ -1,10 +1,16 @@
 import './Header.scss'; // Import des styles spécifiques au header
 import logo from '../../assets/images/LOGO.png'; // Import du logo
-import { NavLink } from 'react-router-dom'; // Utilisation de NavLink pour la navigation dynamique
+import { NavLink, useLocation } from 'react-router-dom'; // Import de `useLocation` pour détecter la route actuelle
 
 const Header = () => {
+  const location = useLocation(); // Récupère l'URL active
+
+  // Détermine la classe du header en fonction de la page
+  const headerClass =
+    location.pathname === '/about' ? 'header about-header' : 'header header-home';
+
   return (
-    <header className="header header-accomodations">
+    <header className={headerClass}>
       <div className="header-logo">
         <img src={logo} alt="Logo Kasa" />
       </div>
