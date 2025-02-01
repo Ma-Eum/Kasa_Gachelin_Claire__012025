@@ -7,11 +7,11 @@
 
 /* Responsive Styles */
 @include mixins.mobile {
-.header-accomodations{
-    margin-bottom: 27px;
-}
+    .header-accomodations{
+        margin-bottom: 27px;
+    }
 
-.footer-accomodations{
-    margin-top: 27px;
-}
+    .footer-accomodations{
+        margin-top: 27px;
+    }
 }
